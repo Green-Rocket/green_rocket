@@ -1,1 +1,6 @@
-blablabla something about the project structure here
+# Green Rocket
+
+Projecte d'aprenentatge.
+
+# Features Actuals
+- Routing
