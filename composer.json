@@ -1,10 +1,6 @@
 {
     "require": {
-
-    },
-
-    "require-dev": {
-        
+        "vlucas/phpdotenv": "^5.7"
     },
 
     "autoload": {
