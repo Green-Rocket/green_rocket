@@ -4,6 +4,7 @@
 
 
     require_once __DIR__ . "/../helper.php";
+    use App\Core\DB;
 
     class HomeController {
 
@@ -12,6 +13,7 @@
         }
 
         function index() {
+            $db=new DB();
             echo view("home", [ "title" => "Home", "menu"=>["1","2"] ]);
         }
 
