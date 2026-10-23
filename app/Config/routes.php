@@ -18,4 +18,9 @@ return [
         'method' => 'GET',
         'handler' => [HomeController::class, 'about']
     ],
+    [
+        'path' => '/users',
+        'method' => 'GET',
+        'handler' => [HomeController::class, 'users']
+    ],
 ];
