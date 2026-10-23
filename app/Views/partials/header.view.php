@@ -6,4 +6,4 @@
     <title><?= $title??"App" ?></title>
 </head>
 <body>
-    <h1 class="h-8"><?= $title ?></h1>
+    <h1 class="h-8"><?= env("APP_NAME") ?></h1>

@@ -4,6 +4,8 @@
 
 
     require_once __DIR__ . "/../helper.php";
+    use App\Core\DB;
+    use App\Models\User;
 
     class HomeController {
 
@@ -12,6 +14,15 @@
         }
 
         function index() {
+            $db=new DB();
+
+            $user = new User();
+        $user->create([
+            "id"=>0,
+            "name"=>"pepe",
+            "email"=>"pepe@pepe.com",
+            "password"=>"pepe"
+        ]);
             echo view("home", [ "title" => "Home", "menu"=>["1","2"] ]);
         }
 
