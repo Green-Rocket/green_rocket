@@ -10,19 +10,18 @@
     class HomeController {
 
         function __construct() {
-            echo "<h2>HOME</h2>";
         }
 
         function index() {
-            $db=new DB();
-
-            $user = new User();
-        $user->create([
-            "id"=>0,
-            "name"=>"pepe",
-            "email"=>"pepe@pepe.com",
-            "password"=>"pepe"
-        ]);
+        /*     $db=new DB(); */
+        /**/
+        /*     $user = new User(); */
+        /* $user->create([ */
+        /*     "id"=>1, */
+        /*     "name"=>"Jaume", */
+        /*     "email"=>"Jaume@pepe.com", */
+        /*     "password"=>"pepe" */
+        /* ]); */
             echo view("home", [ "title" => "Home", "menu"=>["1","2"] ]);
         }
 
@@ -31,5 +30,20 @@
         }
         function about() {
             echo view("about", [ "title" => "about" ]);
+        }
+
+        function users() {
+            $db=new DB();
+            $userRepo = new User();
+            $users = [];
+            for($i=0;$i<10;$i++){
+                $user=$userRepo->getById($i);
+                if($user){
+                    $users[]=$user;
+                }else{
+                    break;
+                }
+            }
+            echo view("users", [ "title" => "users" , "users"=>$users]);
         }
     }
